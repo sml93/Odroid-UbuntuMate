@@ -15,7 +15,8 @@ Install [win32](https://sourceforge.net/projects/win32diskimager/) or [etcher](h
 ## Network Setup
 A network connection is required to complete the first-time setup after flashing the distro. As  `root`, do the following:\
 `sudo apt-get gedit` to download an editor (optional)\
-`sudo gedit /etc/network/interfaces` or `sudo nano /etc/network/interfaces` (if you did not install gedit) then add the following lines in:\
+`sudo gedit /etc/network/interfaces` or `sudo nano /etc/network/interfaces` (if you did not install gedit) then add the following lines in:
+
 `auto wlan0`\
 `allow-hotplut wlan0`\
 `iface wlan0 inet dhcp`\
@@ -29,6 +30,10 @@ If you face an issue between Odroid XU4 and the wifi module, follow this instruc
 The minimal distribution only has `root` setup. To add our own account, `odroid`, use these commands:\
 `adduser odroid`
 `adduser odroid sudo`
+
+Have you ensure that:
+1) Display Manager - Greeter settings are okay?
+2) Partitioning is allocated accordingly?
 
 
 # ROS (KINETIC) Installation
@@ -56,3 +61,33 @@ To find available packages, use:\
 `source ~/.bashrc`
 ## Dependencies for building packages
 `sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential`
+
+
+# To connect between multiple ROS machines (Odroid to Laptop(s))
+## On Odroid
+Power up the `odroid`
+
+Open a terminal but pressing `ctrl+alt+t`
+
+Run `roscore`
+
+Open another tab `ctrl+shift+t` and `rosrun` an application
+
+## On Laptop or Desktop
+Boot into ubuntu, `ctl+alt+t`
+
+`ssh odroid@192.168.1.126` (Odroid's ROS_IP)
+
+> A message will be displayed, type `y` or `yes`
+
+`env | grep ROS` and check if the IP address is entered (it should not be there)
+
+`export ROS_IP=192.168.1.126` (exporting roscore machine's IP address)
+
+`sudo gedit ~/.bashrc` (or sudo nano)
+
+Open another tab/terminal and ssh into odroid again
+
+Run `rostopic list` and check if you are able to see the list of topics on ROS MASTER
+
+
