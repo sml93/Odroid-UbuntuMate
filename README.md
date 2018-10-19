@@ -31,20 +31,20 @@ The minimal distribution only has `root` setup. To add our own account, `odroid`
 `adduser odroid sudo`
 
 
-# ROS (KINETIC) INSTALLATION
-## Setup your sources list
+# ROS (KINETIC) Installation
+#### Setup your sources list
 `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
-## Set up your keys
+#### Set up your keys
 `sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116`
 ## Installation
 `sudo apt-get update`
-### Desktop-Full Installation:
+#### Desktop-Full Installation:
 `sudo apt-get install ros-kinetic-desktop-full`
-### Desktop Installation:
+#### Desktop Installation:
 `sudo apt-get install ros-kineti-desktop`
-### ROS-Base (Bare Bones)
+#### ROS-Base (Bare Bones)
 `sudo apt-get install ros-kinetic-ros-base`
-### Individual Package
+#### Individual Package
 `sudo apt-get install ros-kinetic-PACKAGE`\
 To find available packages, use:\
 `apt-cache search ros-kinetic`
