@@ -8,7 +8,7 @@ Odroid Setup for ROS (KINETIC) installation
 - Keyboard/Mouse (optional)
 
 ## First Time Ubuntu Setup (For eMMC w/o pre-installed image)
-### Download anf Flash Ubuntu (Mate)
+### Download and Flash Ubuntu (Mate)
 Download the Ubuntu 16.04 LTS minimal or mate image from [hardkernel's official odroid wiki repo](https://wiki.odroid.com/odroid-xu4/os_images/linux/ubuntu_4.14/20171213)
 Install [win32](https://sourceforge.net/projects/win32diskimager/) or [etcher](https://etcher.io/) to flash the image into your eMMC
 
