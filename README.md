@@ -92,7 +92,7 @@ Run `rostopic list` and check if you are able to see the list of topics on ROS M
 
 
 ### Streaming serial Jevois on Odroid 
-Ctrl + Alt + T
+`ctrl + alt + t`
 
 `sudo /dev/ttyUSB0 115200` 
 
