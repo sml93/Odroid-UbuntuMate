@@ -94,6 +94,6 @@ Run `rostopic list` and check if you are able to see the list of topics on ROS M
 ### Streaming serial Jevois on Odroid 
 `ctrl + alt + t`
 
-`sudo /dev/ttyUSB0 115200` 
+`sudo screen /dev/ttyUSB0 115200` 
 
 You should see a string of data according to what mode you choose Jevois to run
