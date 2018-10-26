@@ -73,7 +73,7 @@ Run `roscore`
 
 Open another tab `ctrl+shift+t` and `rosrun` an application
 
-## On Laptop or Desktop
+## On Laptop or Desktop or PowerShell
 Boot into ubuntu, `ctl+alt+t`
 
 `ssh odroid@192.168.1.126` (Odroid's ROS_IP)
@@ -82,7 +82,7 @@ Boot into ubuntu, `ctl+alt+t`
 
 `env | grep ROS` and check if the IP address is entered (it should not be there)
 
-`export ROS_IP=192.168.1.126` (exporting roscore machine's IP address)
+`export ROS_IP=192.168.1.127` (exporting roscore machine's IP address)
 
 `sudo gedit ~/.bashrc` (or sudo nano)
 
@@ -91,3 +91,9 @@ Open another tab/terminal and ssh into odroid again
 Run `rostopic list` and check if you are able to see the list of topics on ROS MASTER
 
 
+### Streaming serial Jevois on Odroid 
+Ctrl + Alt + T
+
+`sudo /dev/ttyUSB0 115200` 
+
+You should see a string of data according to what mode you choose Jevois to run
