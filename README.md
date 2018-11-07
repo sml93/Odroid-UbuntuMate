@@ -78,6 +78,10 @@ Boot into ubuntu, `ctl+alt+t`
 
 `ssh odroid@192.168.1.126` (Odroid's ROS_IP)
 
+or `192.168.1.127` (under Free)
+
+or `10.13.97.232` (under SUTD_Student)
+
 > A message will be displayed, type `y` or `yes`
 
 `env | grep ROS` and check if the IP address is entered (it should not be there)
