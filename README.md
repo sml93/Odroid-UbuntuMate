@@ -94,7 +94,7 @@ Open another tab/terminal and ssh into odroid again
 
 Run `rostopic list` and check if you are able to see the list of topics on ROS MASTER
 
-Run `export ROS_MASTER_URI=192.168.1.127` on the other machine (not odroid)
+Run `export ROS_MASTER_URI=http://192.168.1.127:11311` on the other machine (not odroid)
 
 Run `rostopic list`, you should see the topic list there
 
